@@ -1,0 +1,11 @@
+consulta 1:
+SELECT ID_Lider,Nombre,Primer_Apellido,Ciudad_Residencia FROM Lider
+ORDER by Ciudad_Residencia;
+
+consulta 2:
+SELECT ID_Proyecto,Constructora,Numero_Habitaciones,Ciudad FROM Proyecto
+WHERE Clasificacion ="Casa Campestre" AND Ciudad IN ("Santa Marta","Cartagena","Barranquilla");
+
+consulta 3:
+SELECT ID_Compra,Constructora,Banco_Vinculado FROM Proyecto 
+JOIN Compra WHERE Proyecto.ID_Proyecto = Compra.ID_Proyecto AND Proveedor="Homecenter" AND Ciudad = "Salento";
